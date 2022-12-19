@@ -52,7 +52,7 @@
       <div class="container text-center" style="padding-top: 280px;">
         <h1 class="display-2 fw-bold text-danger fontTitle">Taste of India</h1>
         <h2 class="text-white fontTitle">Catering a culture, as well as the cuisine.</h2>
-        <a href="#" class="btn btn-lg btn-danger rounded">Get Started</a>
+        <a href="#options" class="btn btn-lg btn-danger rounded">Get Started</a>
       </div>
     </div>
     <main class="container-fluid text-center my-3 py-4">
@@ -109,7 +109,7 @@
         </div>
         <br><br>
         <!-- articles -->
-        <div class="container my-4 py-4">
+        <div class="container my-4 py-4" id="options">
           <div class="row">
             <div class="col-md-6 p-2">
               <h2 data-mdb-toggle="animation"
@@ -187,7 +187,55 @@
                  data-mdb-animation-start="onScroll"
                  data-mdb-animation="fade-in-right"
                  data-mdb-animation-delay="300">
-                <a href="mailto:#" class="btn btn-danger">Join Our Contact List</a>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+                  Join Our Contact List
+                </button>
+
+                <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="fontTitle fw-bold" id="exampleModalLabel">Subscribe</h3>
+                      <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-info">We don't share your email, name or phone number with anyone else.</p>
+                      <form name="subscribe" method="post" netlify>
+                        <!-- Name input -->
+                        <div class="form-outline mb-4">
+                          <input type="text" name="name" required id="form5Example1" class="form-control" />
+                          <label class="form-label" for="form5Example1">Name</label>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                          <input type="email" name="email" required id="form5Example2" class="form-control" />
+                          <label class="form-label" for="form5Example2">Email address</label>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                          <input type="text" name="phone" required id="phone" class="form-control" />
+                          <label class="form-label" for="phone">Phone</label>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                          <input class="form-check-input me-2" type="checkbox" value="" required id="form5Example3" unchecked />
+                          <label class="form-check-label" for="form5Example3">
+                            I have read and agree to the terms
+                          </label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Subscribe</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
               </p>
             </div>
           </div>
